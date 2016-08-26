@@ -1,0 +1,18 @@
+-   repo: git://github.com/pre-commit/pre-commit-hooks
+    sha: 09d1747840bfb1457e9b8876b4c1f577d00a2a37
+    hooks:
+    -   id: check-added-large-files
+        args:
+        - --maxkb=20
+    -   id: check-merge-conflict
+    -   id: detect-aws-credentials
+    -   id: detect-private-key
+    -   id: trailing-whitespace
+-   repo: git://github.com/bjbishop/commit_tally
+    sha: 6facad67919a86c938e06cd1559497c9266afbee
+    hooks:
+    -   id: commit_tally
+-   repo: git://github.com/bjbishop/commit_habitrpg
+    sha: f15ec72ea787db47985a62d2051a61f6d63bb862
+    hooks:
+    -   id: commit_habitrpg
