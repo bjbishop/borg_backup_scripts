@@ -1,0 +1,9 @@
+* Backups with the Borg system
+These scripts are heavily customized for my user ID and paths. I use a
+scheduler to execute the borg.sh script for my backups.
+
+The borg.sh script starts up the Box.com daemon on my Mac which is the
+destination for my backups. It executes borg and saves a list of files
+backed up, and stops the Box.com daemon after a time.
+
+I keep most tweakable variables in the env.sh script.

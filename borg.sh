@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/usr/bin/env bash
 
 source $HOME/src/borg/env.sh
 ITEM=`uuidgen | tail -c 10`
