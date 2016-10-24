@@ -1,5 +1,10 @@
 #!/usr/local/bin/bash
 
+function borg_notify() {
+    command -v terminal-notifier > /dev/null || brew install terminal-notifier
+    terminal-notifier -title "BORG BACKUP" -message Hi -appIcon `pwd`/borglogo.png -message "$1" -execute "open -a TextEdit -- $BORG_HOME/launchctl.err"
+}
+
 KEEP_THESE_DAYS=14
 KEEP_ALL_WITHIN_DAYS=1d
 PRUNE_OPTIONS="--list --stats --verbose"

@@ -1,8 +1,3 @@
-function borg_notify() {
-    command -v terminal-notifier || brew install terminal-notifier
-    terminal-notifier -title "BORG BACKUP" -message Hi -appIcon `pwd`/borglogo.png -message "$1" -execute "open -a TextEdit -- $BORG_HOME/launchctl.err"
-}
-
 VAULT=/Volumes/Bytor/box/borg
 BORG_HOME=$HOME/src/borg
 BORG_MANIFESTS_HOME=$BORG_HOME/manifests
