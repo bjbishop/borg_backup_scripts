@@ -1,7 +1,7 @@
 #!/usr/local/bin/bash
 
 source $HOME/src/borg/env.sh
-OPTIONS="--repair --lock-wait 30 --verbose"
+OPTIONS="--repair --repository-only --lock-wait 30 --verbose"
 
-yes YES | /usr/local/bin/borg check $OPTIONS $VAULT || borg_notify "Verify unsuccessful!"
+yes YES | $HOME/src/borg/borg check $OPTIONS $VAULT || borg_notify "Verify unsuccessful!"
 

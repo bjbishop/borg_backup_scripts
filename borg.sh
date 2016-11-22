@@ -11,7 +11,7 @@ osascript -e "tell application \"Box Sync\" to activate"
 
 # borg_notify "Backup starting now."
 
-/usr/local/bin/borg create $OPTIONS $VAULT::$ITEM $HOME &> $BORG_MANIFESTS_HOME/$ITEM.txt
+$HOME/src/borg/borg create $OPTIONS $VAULT::$ITEM $HOME &> $BORG_MANIFESTS_HOME/$ITEM.txt
 RETVAL=$?
 
 # https://github.com/borgbackup/borg/issues/871
