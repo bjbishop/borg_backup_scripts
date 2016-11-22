@@ -6,11 +6,6 @@ export PATH=/usr/local/bin:$PATH
 ITEM=`uuidgen | tail -c 10`
 mkdir -p $BORG_MANIFESTS_HOME
 
-function borg_notify() {
-    command -v terminal-notifier > /dev/null || brew install terminal-notifier
-    terminal-notifier -title "BORG BACKUP" -message Hi -appIcon `pwd`/borglogo.png -message "$1" -execute "open -a TextEdit -- $BORG_HOME/launchctl.err"
-}
-
 osascript -e "tell application \"Box Sync\" to activate"
 # sleep 30
 
