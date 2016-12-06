@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
-brew cask install borgbackup
+# brew cask install borgbackup
+
 brew install lz4
-mkdir -p /Volumes/Bytor/box/borg
+ln -s $HOME/Box\ Sync $HOME/box
+mkdir -p $HOME/box/borg-encrypted

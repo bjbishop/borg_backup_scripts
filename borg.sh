@@ -6,7 +6,7 @@ export PATH=/usr/local/bin:$PATH
 ITEM=`uuidgen | tail -c 10`
 mkdir -p $BORG_MANIFESTS_HOME
 
-osascript -e "tell application \"Box Sync\" to activate"
+# osascript -e "tell application \"Box Sync\" to activate"
 # sleep 30
 
 # borg_notify "Backup starting now."

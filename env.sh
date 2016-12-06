@@ -1,4 +1,4 @@
-VAULT=/Volumes/Bytor/box/borg-encrypted
+VAULT=/Users/bishbr/box/borg-encrypted
 BORG_HOME=$HOME/src/borg
 BORG_MANIFESTS_HOME=$BORG_HOME/manifests
 EXCLUDE=$BORG_HOME/exclude
