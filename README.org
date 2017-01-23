@@ -7,3 +7,11 @@ destination for my backups. It executes borg and saves a list of files
 backed up, and stops the Box.com daemon after a time.
 
 I keep most tweakable variables in the env.sh script.
+
+* Encrypted repo setup
+
+borg init -v -e keyfile ~/box/borg-encrypted
+
+* Keyfile export to USB drive
+
+borg key export ~/box/borg-encrypted /Volumes/sandisk/Artifacts/borg-encrypted-sierra.key
