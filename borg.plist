@@ -11,10 +11,10 @@
       <string>/Users/bishbr/src/borg/borg.sh</string>
     </array>
     <key>StandardErrorPath</key>
-    <string>/Users/bishbr/src/borg/launchctl.err</string>
+    <string>/Users/bishbr/src/borg/borg-launchctl.err</string>
     <key>StandardOutPath</key>
-    <string>/Users/bishbr/src/borg/launchctl.out</string>
+    <string>/Users/bishbr/src/borg/borg-launchctl.out</string>
     <key>StartInterval</key>
-    <integer>3600</integer>
+    <integer>10800</integer> <!-- seconds -->
   </dict>
 </plist>
