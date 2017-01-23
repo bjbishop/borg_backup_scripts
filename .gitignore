@@ -4,3 +4,5 @@
 /manifests
 /borg-macosx64*
 /borg
+.\#*
+\#*
