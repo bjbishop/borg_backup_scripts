@@ -1,4 +1,6 @@
-#!/usr/local/bin/bash
+#!/usr/local/bin/bash -l
+
+source ~/.bashrc
 
 source $HOME/src/borg/env.sh
 export PATH=/usr/local/bin:$PATH
@@ -9,9 +11,9 @@ mkdir -p $BORG_MANIFESTS_HOME
 # osascript -e "tell application \"Box Sync\" to activate"
 # sleep 30
 
-# borg_notify "Backup starting now."
+borg_notify "Backup starting now."
 
-$HOME/src/borg/borg create $OPTIONS $VAULT::$ITEM $HOME &> $BORG_MANIFESTS_HOME/$ITEM.txt
+\borg create $OPTIONS $VAULT::$ITEM $HOME &> $BORG_MANIFESTS_HOME/$ITEM.txt
 RETVAL=$?
 
 # https://github.com/borgbackup/borg/issues/871
