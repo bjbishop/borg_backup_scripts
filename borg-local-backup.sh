@@ -14,7 +14,7 @@ then
     exit 0
 fi
 
-sudo mkdir $VAULT @> /dev/null
+sudo mkdir $VAULT > /dev/null
 sudo chown $USER:staff $VAULT
 
 $BORG_HOME/borg.sh
