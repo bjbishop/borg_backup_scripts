@@ -1,6 +1,4 @@
-#!/usr/local/bin/bash -l
-
-source ~/.bashrc
+#!/usr/local/bin/bash
 
 source $HOME/src/borg/env.sh
 export PATH=/usr/local/bin:$PATH
