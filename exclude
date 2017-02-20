@@ -40,16 +40,14 @@
 **#*
 **/*~
 /Users/bishbr/cookbookgems
-/Users/bishbr/bananahandle
-/Users/bishbr/merle
 **/.berkshelf/cookbooks
 **/.berkshelf/tmp
+/Users/bishbr/tmp
 /Users/bishbr/src/abbi-repository
 /Users/bishbr/.rubies
 /Users/bishbr/Library
 /Users/bishbr/Applications
 /Users/bishbr/Downloads
-/Users/bishbr/Documents
 /Users/bishbr/Dropbox
 /Users/bishbr/Box Sync
 /Users/bishbr/box
@@ -68,4 +66,5 @@
 /Users/bishbr/Amazon Drive
 /Users/bishbr/VirtualBox VMs
 /Users/bishbr/src/screenshots
+/Users/bishbr/src/sorm
 /Users/bishbr/.minikube

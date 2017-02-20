@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/usr/local/bin/bash -l
 
 export BORG_HOME=$HOME/src/borg
 source $BORG_HOME/env.sh
