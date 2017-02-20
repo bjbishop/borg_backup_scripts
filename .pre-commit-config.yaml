@@ -1,5 +1,5 @@
 -   repo: git://github.com/pre-commit/pre-commit-hooks
-    sha: 4ef03c4223ad322c7adaa6c6c0efb26b57df3b71
+    sha: 46251c9523506b68419aefdf5ff6ff2fbc4506a4
     hooks:
     -   id: check-added-large-files
         args:
@@ -15,7 +15,7 @@
     hooks:
     -   id: commit_tally
 -   repo: git://github.com/bjbishop/commit_habitrpg
-    sha: f15ec72ea787db47985a62d2051a61f6d63bb862
+    sha: d4029cb583c58e48b4f8aaa9cff26e246df57a74
     hooks:
     -   id: commit_habitrpg
 -   repo: git://github.com/bjbishop/git-secrets
