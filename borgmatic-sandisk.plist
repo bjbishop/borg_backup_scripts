@@ -5,16 +5,16 @@
     <key>RunAtLoad</key>
     <true/>
     <key>Label</key>
-    <string>org.bishbr.borg-local</string>
+    <string>org.bishbr.borgmatic-sandisk</string>
     <key>ProgramArguments</key>
     <array>
-      <string>/Users/bishbr/src/borg/borg-local-backup.sh</string>
+      <string>/Users/bishbr/src/borg/borgmatic-sandisk.sh</string>
     </array>
     <key>StandardErrorPath</key>
-    <string>/Users/bishbr/src/borg/borg-local-launchctl.err</string>
+    <string>/Users/bishbr/src/borg/borgmatic-sandisk-launchctl.err</string>
     <key>StandardOutPath</key>
-    <string>/Users/bishbr/src/borg/borg-local-launchctl.out</string>
+    <string>/Users/bishbr/src/borg/borgmatic-sandisk-launchctl.out</string>
     <key>StartInterval</key>
-    <integer>3600</integer> <!-- seconds -->
+    <integer>6800</integer> <!-- seconds -->
   </dict>
 </plist>
