@@ -1,8 +1,6 @@
 require "rake/clean"
 
-CLEAN.include "**/*launchctl.*"
-CLEAN.include "/Users/bishbr/Box Sync/borg-encrypted/lock.exclusive"
-CLOBBER.include "manifests/*"
+CLEAN.include "*launchctl.*"
 
 desc "Create the box directory and install the req'd packages"
 task :setup do
@@ -14,18 +12,19 @@ task :setup do
   FileUtils.ln_sf(File.join(ENV['HOME'], "Box Sync"),
                   File.join(ENV['HOME'], "box")) unless
     File.exist?(File.join(ENV['HOME'], "box"))
-  FileUtils.mkdir_p("$HOME/box/borg-encrypted")
+  FileUtils.mkdir_p("$HOME/box/borgmatic")
   sh("gem install lunchy")
-  sh("lunchy install borg.plist")
-  sh("lunchy install borg-local.plist")
-  sh("lunchy start -x borg")
-  sh("lunchy start -x borg-local")
+  sh("pip3 install --upgrade borgmatic")
+  %w(box redsandisk sandisk).each do |b|
+    sh("lunchy install borgmatic-#{b}.plist")
+    sh("lunchy start borgmatic-#{b}")
+  end
 end
 
 desc "Uninstall the services"
 task :uninstall do
-  sh("lunchy stop -x borg")
-  sh("lunchy stop -x borg-local")
-  sh("lunchy uninstall borg.plist")
-  sh("lunchy uninstall borg-local.plist")
+  %w(box redsandisk sandisk).each do |b|
+    sh("lunchy stop borgmatic-#{b}")
+    sh("lunchy uninstall borgmatic-#{b}.plist")
+  end
 end
