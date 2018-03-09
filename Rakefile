@@ -12,7 +12,7 @@ task :setup do
   FileUtils.ln_sf(File.join(ENV['HOME'], "Box Sync"),
                   File.join(ENV['HOME'], "box")) unless
     File.exist?(File.join(ENV['HOME'], "box"))
-  FileUtils.mkdir_p("$HOME/box/borgmatic")
+  FileUtils.mkdir_p(File.join(ENV['HOME'], "box", "borgmatic"))
   sh("gem install lunchy")
   sh("pip3 install --upgrade borgmatic")
   %w(box redsandisk sandisk).each do |b|

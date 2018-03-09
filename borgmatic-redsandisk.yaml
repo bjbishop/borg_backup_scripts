@@ -232,7 +232,7 @@ consistency:
     # "archive" checks all of the archives, and "extract" does an extraction dry-run
     # of just the most recent archive.
     checks:
-        - repository
+#        - repository
         - archives
 #        - extract
 
@@ -257,6 +257,6 @@ hooks:
     # List of one or more shell commands or scripts to execute in case an exception has occurred.
     on_error:
 #        - '~/bin/anybar.sh red'
-        - '/Users/bishbr/bin/phone.sh "Alert! Backup failed!"'
+        - '/Users/bishbr/bin/phone.sh "Alert! Red Sandisk Backup failed!"'
         - '/usr/local/bin/terminal-notifier -title "BORG BACKUP" -appIcon ~/src/borg/borglogo.png -message "Alert! Backup failed!" -execute "open -a TextEdit -- ~/src/borg/borg-launchctl-redsandisk.err"'
         - echo "`date` - Error while creating a backup."
