@@ -3,7 +3,21 @@
 #+BEGIN_SRC sh
   export BORG_PASSCOMMAND="security -q find-generic-password -l 'borgmatic version1' -w"
   borg init --encryption=keyfile-blake2 <PATH>
+  borg config <PATH> additional_free_space 2G
+  borg config <PATH> max_segment_size 240M # needed for Box.com uploads
 #+END_SRC
+
+
+1st_temp borg repo create
+
+#+BEGIN_SRC sh
+  export BORG_PASSCOMMAND="security -q find-generic-password -l 'borgmatic version1' -w"
+  borg init --encryption=keyfile-blake2 ~/1st_temp/borg
+#  borg config <PATH> additional_free_space 2G
+#  borg config <PATH> max_segment_size 240M # needed for Box.com uploads
+#+END_SRC
+
+#+RESULTS:
 
 * Keyfile export to USB drive
 
@@ -13,3 +27,22 @@ borg key export ~/box/borg-encrypted /Volumes/sandisk/Artifacts/borg-encrypted.k
 
 #+RESULTS:
 
+* Release locking
+
+Had to nuke some lock files after several failed backups
+
+#+BEGIN_SRC sh :results output
+rm -f /Volumes/Redsandisk/borgmatic/lock.exclusive/*
+rm -f /Volumes/Sandisk/borgmatic/lock.exclusive/*
+rm -f ~/box/borgmatic/lock.exclusive/*
+rm -f ~/.cache/borg/*
+#+END_SRC
+
+#+RESULTS:
+
+* TODO update the borg executable on the external devices
+borg's out of date on the USB disks
+
+
+
+ 

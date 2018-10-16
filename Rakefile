@@ -1,6 +1,6 @@
 require "rake/clean"
 
-CLEAN.include "*launchctl.*"
+CLEAN.include "logs/*launchctl.*"
 
 desc "Create the box directory and install the req'd packages"
 task :setup do

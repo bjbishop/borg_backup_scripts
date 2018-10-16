@@ -11,9 +11,9 @@
       <string>/Users/bishbr/src/borg/borgmatic-box.sh</string>
     </array>
     <key>StandardErrorPath</key>
-    <string>/Users/bishbr/src/borg/borgmatic-box-launchctl.err</string>
+    <string>/Users/bishbr/src/borg/logs/borgmatic-box-launchctl.err</string>
     <key>StandardOutPath</key>
-    <string>/Users/bishbr/src/borg/borgmatic-box-launchctl.out</string>
+    <string>/Users/bishbr/src/borg/logs/borgmatic-box-launchctl.out</string>
     <key>StartInterval</key>
     <integer>7200</integer> <!-- seconds -->
   </dict>

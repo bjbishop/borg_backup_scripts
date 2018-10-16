@@ -18,7 +18,7 @@ location:
     # repositories are backed up to in sequence. See ssh_command for SSH options like
     # identity file or port.
     repositories:
-        - /Volumes/sandisk/borgmatic
+        - ~/1st_temp/borg
 
     # Any paths matching these patterns are included/excluded from backups. Globs are
     # expanded. (Tildes are not.) Note that Borg considers this option experimental.
@@ -184,14 +184,14 @@ storage:
     umask: 0077
 
     # Maximum seconds to wait for acquiring a repository/cache lock.
-    lock_wait: 30
+    lock_wait: 300
 
     # Name of the archive. Borg placeholders can be used. See the output of
     # "borg help placeholders" for details. Default is
     # "{hostname}-{now:%Y-%m-%dT%H:%M:%S.%f}". If you specify this option, you must
     # also specify a prefix in the retention section to avoid accidental pruning of
     # archives with a different archive name format.
-    archive_name_format: 'usb-{now}'
+    archive_name_format: 'normal-{now}'
 
 # Retention policy for how many backups to keep in each category. See
 # https://borgbackup.readthedocs.org/en/stable/usage.html#borg-prune for details.
@@ -204,10 +204,10 @@ retention:
     # keep_minutely: 60
 
     # Number of hourly archives to keep.
-    keep_hourly: 4
+    keep_hourly: 8
 
     # Number of daily archives to keep.
-    keep_daily: 5
+    keep_daily: 10
 
     # # Number of weekly archives to keep.
     # keep_weekly: 4
@@ -221,7 +221,7 @@ retention:
     # When pruning, only consider archive names starting with this prefix.
     # Borg placeholders can be used. See the output of "borg help placeholders" for
     # details. Default is "{hostname}-".
-    prefix: usb-
+    prefix: normal-
 
 # Consistency checks to run after backups. See
 # https://borgbackup.readthedocs.org/en/stable/usage.html#borg-check and
@@ -233,13 +233,13 @@ consistency:
     # "archive" checks all of the archives, and "extract" does an extraction dry-run
     # of just the most recent archive.
     checks:
-      - disabled
-      # - repository
+      - repository
+      # - disabled
       # - archives
       # - extract
 
     # Restrict the number of checked archives to the last n. Applies only to the "archives" check.
-    check_last: 3
+    # check_last: 3
 
 # Shell commands or scripts to execute before and after a backup or if an error has occurred.
 # IMPORTANT: All provided commands and scripts are executed with user permissions of borgmatic.
@@ -248,17 +248,17 @@ consistency:
 hooks:
     # List of one or more shell commands or scripts to execute before creating a backup.
     before_backup:
-#        - '~/bin/anybar.sh orange'
+        - '~/bin/anybar.sh orange'
         - echo "`date` - Starting a backup job."
 
     # List of one or more shell commands or scripts to execute after creating a backup.
     after_backup:
-#        - '~/bin/anybar.sh green'
+        - '~/bin/anybar.sh green'
         - echo "`date` - Backup created."
 
     # List of one or more shell commands or scripts to execute in case an exception has occurred.
     on_error:
-#        - '~/bin/anybar.sh red'
-#        - '/Users/bishbr/bin/phone.sh "Alert! Sandisk Backup failed!"'
-        - '/usr/local/bin/terminal-notifier -title "BORG BACKUP" -appIcon ~/src/borg/borglogo.png -message "Alert! Backup failed!" -execute "open -a TextEdit -- ~/src/borg/borg-launchctl-sandisk.err"'
+        - '~/bin/anybar.sh red'
+        - '/Users/bishbr/bin/phone.sh "Alert! Qdrive Backup failed!"'
+        - '/usr/local/bin/terminal-notifier -title "BORG BACKUP" -appIcon ~/src/borg/borglogo.png -message "Alert! Backup failed!" -execute "open -a TextEdit -- ~/src/borg/borg-launchctl-qdrive.err"'
         - echo "`date` - Error while creating a backup."

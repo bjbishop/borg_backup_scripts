@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/usr/bin/env bash
 
 set -e
 
@@ -9,5 +9,8 @@ export PATH=/usr/local/bin:$PATH
 export BORG_RELOCATED_REPO_ACCESS_IS_OK=yes
 export BORG_PASSCOMMAND="security -q find-generic-password -l 'borgmatic version1' -w"
 
-CMD="nice /usr/local/bin/borgmatic -c $HOME/src/borg/borgmatic-box.yaml -v 1"
+mount -t smbfs //bishbr@icdwpcoredfs01.peroot.com/Share/1st%20Temp/bishbr ~/1st_temp
+mkdir -p ~/1st_temp/borg
+CMD="nice /usr/local/bin/borgmatic -c $HOME/src/borg/borgmatic-qdrive.yaml -v 1"
 $CMD || $CMD
+umount ~/1st_temp
