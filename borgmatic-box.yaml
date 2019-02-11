@@ -119,7 +119,7 @@ location:
       - '- /Users/bishbr/VirtualBox VMs'
       - '- /Users/bishbr/Google Drive'
       - '- /Users/bishbr/Google Drive Personal'
-      - '- /Users/bishbr/src/packer/**/*.box'
+      - '- /Users/bishbr/**/*.box'
       - '- /Users/bishbr/**/packer_cache'
       - '- /Users/bishbr/borgmatic'
       - '- /Users/bishbr/.m2'

@@ -9,6 +9,7 @@
 /Users/bishbr/**/vendor
 /Users/bishbr/**/.gem
 **/*.original
+**/*.box
 /Users/bishbr/**/*packer*zip
 /Users/bishbr/**/*.iso
 /Users/bishbr/**/*.dmg

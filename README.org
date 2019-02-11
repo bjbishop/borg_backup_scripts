@@ -8,14 +8,32 @@
 #+END_SRC
 
 
+
+list the temp directory
+
+#+BEGIN_SRC bash :results output
+    umount ~/1st_temp/ || true
+
+    mount -t smbfs //bishbr@icdwpcoredfs01.peroot.com/Share/1st%20Temp ~/1st_temp
+    ls -ld ~/1st_temp/bishbr
+#+END_SRC
+
+#+RESULTS:
+: drwx------+ 1 bishbr PEROOT\Domain Users 16384 Feb 11 10:52 /Users/bishbr/1st_temp/bishbr
+
 1st_temp borg repo create
 
-#+BEGIN_SRC sh
+#+BEGIN_SRC sh :results output
+  umount ~/1st_temp/ || true
+
+  mount -t smbfs //bishbr@icdwpcoredfs01.peroot.com/Share/1st%20Temp ~/1st_temp
+  mkdir -p ~/1st_temp/bishbr
+
   export BORG_PASSCOMMAND="security -q find-generic-password -l 'borgmatic version1' -w"
-  borg init --encryption=keyfile-blake2 ~/1st_temp/borg
-#  borg config <PATH> additional_free_space 2G
-#  borg config <PATH> max_segment_size 240M # needed for Box.com uploads
+  borg init --progress --verbose --encryption=keyfile-blake2 ~/1st_temp/bishbr/borg
+  umount ~/1st_temp
 #+END_SRC
+
 
 #+RESULTS:
 
