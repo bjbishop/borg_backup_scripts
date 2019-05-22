@@ -1,0 +1,28 @@
+# Keep all archives within this time interval.
+keep_within: 3H
+
+# Number of secondly archives to keep.
+#keep_secondly: 60
+
+# Number of minutely archives to keep.
+#keep_minutely: 60
+
+# Number of hourly archives to keep.
+keep_hourly: 2
+
+# Number of daily archives to keep.
+keep_daily: 2
+
+# Number of weekly archives to keep.
+keep_weekly: 2
+
+# Number of monthly archives to keep.
+#keep_monthly: 6
+
+# Number of yearly archives to keep.
+#keep_yearly: 1
+
+# When pruning, only consider archive names starting with this prefix.
+# Borg placeholders can be used. See the output of "borg help placeholders" for
+# details. Defaults to "{hostname}-".
+prefix: normal-

@@ -1,0 +1,96 @@
+- **/nohup.out
+- **/.DS_Store
+- **/.git
+- **/.virtualenvs
+- **/.gradle
+- /private/tmp/borgbackup/Users/bishbr/**/.chef/checksums
+- /private/tmp/borgbackup/Users/bishbr/**/.chef/chef_server_backup
+- /private/tmp/borgbackup/Users/bishbr/**/*.vmdk
+- /private/tmp/borgbackup/Users/bishbr/**.old
+
+- /private/tmp/borgbackup/Users/bishbr/.tsk_recording
+- /private/tmp/borgbackup/Users/bishbr/**/.terragrunt-cache
+- /private/tmp/borgbackup/Users/bishbr/**/.terragrunt
+- /private/tmp/borgbackup/Users/bishbr/src/emacs/dot_emacs/elpa.backup
+- /private/tmp/borgbackup/Users/bishbr/src/emacs/dot_emacs/tmp
+- /private/tmp/borgbackup/Users/bishbr/src/emacs/dot_emacs/backups
+- /private/tmp/borgbackup/Users/bishbr/.rvm
+
+# Comment
+- /private/tmp/borgbackup/Users/bishbr/Documents/.evernote
+- /private/tmp/borgbackup/Users/bishbr/Documents/triple
+- /private/tmp/borgbackup/Users/bishbr/Documents/**/*.jpg
+- /private/tmp/borgbackup/Users/bishbr/Documents/**/*.png
+- /private/tmp/borgbackup/Users/bishbr/Documents/Digital Editions
+
+- /private/tmp/borgbackup/Users/bishbr/src/borg/logs
+- /private/tmp/borgbackup/Users/bishbr/.borg_backup_in_process
+
+- /private/tmp/borgbackup/Users/bishbr/**/vendor
+- /private/tmp/borgbackup/Users/bishbr/**/.gem
+- /private/tmp/borgbackup/Users/bishbr/**/*packer*zip
+- **/*.iso*
+- **/*.dmg
+- /private/tmp/borgbackup/Users/bishbr/.Trash
+- /private/tmp/borgbackup/Users/bishbr/.local/share/Trash
+- /private/tmp/borgbackup/Users/bishbr/.vagrant.d/boxes
+- /private/tmp/borgbackup/Users/bishbr/.vagrant.d/cache
+- /private/tmp/borgbackup/Users/bishbr/.vagrant.d/tmp
+- /private/tmp/borgbackup/Users/bishbr/.vagrant/machines
+- /private/tmp/borgbackup/Users/bishbr/.docker/machine
+- /private/tmp/borgbackup/Users/bishbr/.chef/checksums
+- /private/tmp/borgbackup/Users/bishbr/.chef/syntax_check_cache
+- /private/tmp/borgbackup/Users/bishbr/.cpan
+- /private/tmp/borgbackup/Users/bishbr/.cache
+- **/.chefdk
+- /private/tmp/borgbackup/Users/bishbr/.gem
+- /private/tmp/borgbackup/Users/bishbr/.heroku
+- /private/tmp/borgbackup/Users/bishbr/.npm
+- /private/tmp/borgbackup/Users/bishbr/.vagrant.d/gems
+- /private/tmp/borgbackup/Users/bishbr/.vagrant.d/cache
+- /private/tmp/borgbackup/Users/bishbr/.vagrant.d/boxes
+- /private/tmp/borgbackup/Users/bishbr/.vagrant.d/tmp
+- /private/tmp/borgbackup/Users/bishbr/.vagrant.d/data
+- /private/tmp/borgbackup/Users/bishbr/.oracle_jre_usage
+
+- **/.vagrant
+- **/*roms
+- **/*games
+- **/*xbmc
+- **/*#*
+- **/*~
+- /private/tmp/borgbackup/Users/bishbr/**/.berkshelf
+- /private/tmp/borgbackup/Users/bishbr/tmp
+- /private/tmp/borgbackup/Users/bishbr/longtmp
+- /private/tmp/borgbackup/Users/bishbr/.rubies
+- /private/tmp/borgbackup/Users/bishbr/Applications
+- /private/tmp/borgbackup/Users/bishbr/Library
+- /private/tmp/borgbackup/Users/bishbr/Downloads
+- /private/tmp/borgbackup/Users/bishbr/Dropbox
+- /private/tmp/borgbackup/Users/bishbr/Box Sync
+- /private/tmp/borgbackup/Users/bishbr/box
+- /private/tmp/borgbackup/Users/bishbr/Movies
+- /private/tmp/borgbackup/Users/bishbr/Archive
+- /private/tmp/borgbackup/Users/bishbr/Pictures
+- /private/tmp/borgbackup/Users/bishbr/Music
+- **/*mp3
+- /private/tmp/borgbackup/Users/bishbr/VMs
+- /private/tmp/borgbackup/Users/bishbr/.bundle
+- /private/tmp/borgbackup/Users/bishbr/Amazon Drive
+- /private/tmp/borgbackup/Users/bishbr/VirtualBox VMs
+- /private/tmp/borgbackup/Users/bishbr/Google Drive
+- /private/tmp/borgbackup/Users/bishbr/Google Drive Personal
+- **/*.box
+- **/packer_cache
+- **/.m2
+- /private/tmp/borgbackup/Users/bishbr/1st_temp
+- /private/tmp/borgbackup/Users/bishbr/.built_in_ruby_gems
+- **/*.img
+- /private/tmp/borgbackup/Users/bishbr/.ivy2
+- /private/tmp/borgbackup/Users/bishbr/.vscode
+- /private/tmp/borgbackup/Users/bishbr/.sonar
+- /private/tmp/borgbackup/Users/bishbr/.sbt
+- /private/tmp/borgbackup/Users/bishbr/Public
+
++ /private/tmp/borgbackup/Users/bishbr
+- /
