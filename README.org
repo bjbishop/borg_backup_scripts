@@ -78,10 +78,3 @@ rm -f ~/.cache/borg/*
 #+END_SRC
 
 #+RESULTS:
-
-* TODO update the borg executable on the external devices
-borg's out of date on the USB disks
-
-
-
- 
