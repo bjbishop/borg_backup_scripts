@@ -19,7 +19,7 @@ list the temp directory
 #+END_SRC
 
 #+RESULTS:
-: drwx------+ 1 bishbr PEROOT\Domain Users 16384 Feb 11 10:52 /Users/bishbr/1st_temp/bishbr
+: drwx------+ 1 bishbr 1160039685 16384 May  9 13:38 /Users/bishbr/1st_temp/bishbr
 
 1st_temp borg repo create
 
@@ -36,6 +36,27 @@ list the temp directory
 
 
 #+RESULTS:
+#+begin_example
+Initializing repository at "/Users/bishbr/1st_temp/bishbr/borg"
+Key in "/Users/bishbr/.config/borg/keys/Users_bishbr_1st_temp_bishbr_borg.7" created.
+Keep this key safe. Your data will be inaccessible without it.
+Initializing cache transaction: Reading configInitializing cache transaction: Reading chunksInitializing cache transaction: Reading filesSynchronizing chunks cache...
+Archives: 0, w/ cached Idx: 0, w/ outdated Idx: 0, w/o cached Idx: 0.
+Done.
+Saving chunks cacheSaving cache config
+By default repositories initialized with this version will produce security
+errors if written to with an older version (up to and including Borg 1.0.8).
+
+If you want to use these older versions, you can disable the check by running:
+borg upgrade --disable-tam /Users/bishbr/1st_temp/bishbr/borg
+
+See https://borgbackup.readthedocs.io/en/stable/changes.html#pre-1-0-9-manifest-spoofing-vulnerability for details about the security implications.
+
+IMPORTANT: you will need both KEY AND PASSPHRASE to access this repo!
+Use "borg key export" to export the key, optionally in printable format.
+Write down the passphrase. Store both at safe place(s).
+
+#+end_example
 
 * Keyfile export to USB drive
 

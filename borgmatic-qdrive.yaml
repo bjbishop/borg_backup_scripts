@@ -4,7 +4,7 @@
 location:
     # List of source directories to backup (required). Globs and tildes are expanded.
     source_directories:
-        - '~'
+        - /private/tmp/borgbackup/Users/bishbr
 
     # Stay in same file system (do not cross mount points).
     one_file_system: true
@@ -36,13 +36,10 @@ location:
     
     
     patterns:
-      - '- /Users/bishbr/Library/Application Support/Symantec'
-      - '- /Users/bishbr/Library/Application Support/Oracle'
-      - '- /Users/bishbr/Library/Application Support/Slack'
-      - '- /Users/bishbr/Library/Application Support/AirDroid'
-      - '- /Users/bishbr/Library/Application Support/Kitematic'
-      - '- /Users/bishbr/Library/Application Support/Google Play Music Desktop Player'
-      - '+ /Users/bishbr/Library/Application Support'
+      - '- /Users/bishbr/Documents/Digital Editions'
+      - '- /Users/bishbr/Library'
+      - '- /Users/bishbr/**/.virtualenvs'
+      - '- /Users/bishbr/.gradle'
       - '+ /Users/bishbr/src/**/.git/objects'
       - '+ /Users/bishbr/src/**/.git/refs'
       - '+ /Users/bishbr/tsk/**/.git/objects'
@@ -50,6 +47,8 @@ location:
       - '- /Users/bishbr/.tsk_recording'
       - '+ /Users/bishbr/vm/**/.git/objects'
       - '+ /Users/bishbr/vm/**/.git/refs'
+      - '- /Users/bishbr/**/.terragrunt-cache'
+      - '- /Users/bishbr/**/.terragrunt'
       - '- **/elpa.backup/*'
       - '- ~/.kube'
       - '- /Users/bishbr/Library'
@@ -122,9 +121,12 @@ location:
       - '- /Users/bishbr/**/*.box'
       - '- /Users/bishbr/**/packer_cache'
       - '- /Users/bishbr/borgmatic'
+      - '- /Users/bishbr/src/borg/logs'
       - '- /Users/bishbr/.m2'
+      - '- /Users/bishbr/1st_temp'
       - '- /Users/bishbr/.built_in_ruby_gems'
       - '- **/*.img'
+      
 
 
     # Read include/exclude patterns from one or more separate named files, one pattern
@@ -232,6 +234,7 @@ consistency:
     # all consistency checks. "repository" checks the consistency of the repository,
     # "archive" checks all of the archives, and "extract" does an extraction dry-run
     # of just the most recent archive.
+    prefix: normal-
     checks:
       - repository
       # - disabled

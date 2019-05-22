@@ -9,5 +9,5 @@ export PATH=/usr/local/bin:$PATH
 export BORG_RELOCATED_REPO_ACCESS_IS_OK=yes
 export BORG_PASSCOMMAND="security -q find-generic-password -l 'borgmatic version1' -w"
 
-CMD="nice /usr/local/bin/borgmatic -c $HOME/src/borg/borgmatic-box.yaml -v 1"
+CMD="nice /usr/local/bin/borgmatic -c $HOME/src/borg/borgmatic-box.yaml"
 $CMD || $CMD

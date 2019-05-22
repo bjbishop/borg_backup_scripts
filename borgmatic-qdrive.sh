@@ -11,6 +11,4 @@ export BORG_PASSCOMMAND="security -q find-generic-password -l 'borgmatic version
 
 mount -t smbfs //bishbr@icdwpcoredfs01.peroot.com/Share/1st%20Temp/bishbr ~/1st_temp
 mkdir -p ~/1st_temp/borg
-CMD="nice /usr/local/bin/borgmatic -c $HOME/src/borg/borgmatic-qdrive.yaml -v 1"
-$CMD || $CMD
-umount ~/1st_temp
+nice /usr/local/bin/borgmatic -c $HOME/src/borg/borgmatic-qdrive.yaml && umount ~/1st_temp
