@@ -15,18 +15,25 @@ task :setup do
                     File.join(ENV['HOME'], 'box'))
   end
   FileUtils.mkdir_p(File.join(ENV['HOME'], 'box', 'borgmatic'))
-  sh('gem install lunchy')
   sh('pip3 install --upgrade borgmatic')
-  %w[box redsandisk sandisk].each do |b|
-    sh("lunchy install borgmatic-#{b}.plist")
-    sh("lunchy start borgmatic-#{b}")
-  end
 end
 
-desc 'Uninstall the services'
-task :uninstall do
-  %w[box redsandisk sandisk].each do |b|
-    sh("lunchy stop borgmatic-#{b}")
-    sh("lunchy uninstall borgmatic-#{b}.plist")
+
+namespace :service do
+  desc 'Install the services'
+  task :install do
+    sh('gem install lunchy')  
+    %w[box redsandisk sandisk].each do |b|
+      sh("lunchy install #{b}.plist")
+      sh("lunchy start -x #{b}")
+    end
   end
+
+  desc 'Uninstall the services'
+  task :uninstall do
+    %w[box redsandisk sandisk].each do |b|
+      sh("lunchy uninstall -x #{b}")
+    end
+  end
+
 end

@@ -13,6 +13,6 @@ diskutil unmount "$SNAPSHOT_DIR" || \
 SNAPSHOTS=$(tmutil listlocalsnapshots /)
 for SNAPSHOT in $SNAPSHOTS
 do
-    SNAPSHOT_TIMESTAMP=$(echo $SNAPSHOT | tail -1 | awk -F "." ' { print $4 } ' | tr -d "[:space:]")
+    SNAPSHOT_TIMESTAMP=$(echo "$SNAPSHOT" | tail -1 | awk -F "." ' { print $4 } ' | tr -d "[:space:]")
     tmutil deletelocalsnapshots "$SNAPSHOT_TIMESTAMP"
 done

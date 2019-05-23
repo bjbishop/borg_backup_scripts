@@ -22,5 +22,9 @@ chown bishbr ~/src/borg/logs
 open -g -a Anybar
 
 mount -t smbfs //bishbr@icdwpcoredfs01.peroot.com/Share/1st%20Temp/bishbr ~/1st_temp
-test -d ~/1st_temp/borg
-nice /usr/local/bin/borgmatic -c $HOME/src/borg/qdrive.yaml && umount ~/1st_temp
+if [ -d ~/1st_temp/borg ]
+then
+    nice /usr/local/bin/borgmatic -c "$HOME/src/borg/qdrive.yaml"
+    umount ~/1st_temp
+fi
+

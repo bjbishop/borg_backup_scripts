@@ -67,6 +67,7 @@
 - /private/tmp/borgbackup/Users/bishbr/Library
 - /private/tmp/borgbackup/Users/bishbr/Downloads
 - /private/tmp/borgbackup/Users/bishbr/Dropbox
+- /private/tmp/borgbackup/Users/bishbr/.dropbox
 - /private/tmp/borgbackup/Users/bishbr/Box Sync
 - /private/tmp/borgbackup/Users/bishbr/box
 - /private/tmp/borgbackup/Users/bishbr/Movies

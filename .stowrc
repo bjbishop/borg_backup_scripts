@@ -1,2 +1,0 @@
---target=/Users/bishbr/.profile.d
---ignore=^((?!borg_variables\.sh)[\s\S])*$
